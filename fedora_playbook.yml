@@ -1,0 +1,7 @@
+- name: set up fedora workstation
+  hosts: all
+  tasks:
+    - name: install base software
+      become: yes
+      package: 
+        name: 
