@@ -1,7 +1,25 @@
 - name: set up fedora workstation
-  hosts: all
+  hosts: localhost
   tasks:
-    - name: install base software
+    - name: install 1password
       become: yes
-      package: 
-        name: 
+      ansible.builtin.dnf:
+        name: 1password
+        state: latest
+    - name: install discord
+      ansible.builtin.dnf:
+        name: discord
+        state: latest
+    - name: install uv
+      ansible.builtin.dnf:
+        name: uv
+        state: latest
+    - name: install fastfetch
+      ansible.builtin.dnf:
+        name: fastfetch
+        state: latest
+    - name: install thonny
+      ansible.builtin.dnf:
+        name: thonny
+        state: latest
+
