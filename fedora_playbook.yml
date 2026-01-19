@@ -14,10 +14,12 @@
           - lsd
         state: latest
 
+    # user has to push uname via --extra-vars "uname= "
     - name: create project file path
       ansible.builtin.file:
         path: /home/{{ uname }}/workspace/
         state: directory
         mode: '0755'
+
 
 
